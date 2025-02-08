@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Prediction Hack</title>
+    <title>Pritam</title>
     <!-- Hacker-like terminal fonts -->
-<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -16,6 +17,7 @@
             margin: 0;
             padding: 0;
         }
+
         .app-container {
             display: flex;
             flex-wrap: wrap;
@@ -24,6 +26,7 @@
             margin: 50px auto;
             width: 90%;
         }
+
         .container {
             width: 300px;
             padding: 50px;
@@ -35,6 +38,7 @@
             overflow: hidden;
             animation: fadeIn 1s ease-out;
         }
+
         .icon {
             width: 150px;
             height: 150px;
@@ -43,6 +47,7 @@
             box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.7);
             animation: glitch 1.5s infinite;
         }
+
         .button {
             display: inline-block;
             margin: 10px;
@@ -60,10 +65,12 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
+
         .button:hover {
             background-color: #00cc00;
             box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.9);
         }
+
         .button:before {
             content: '';
             position: absolute;
@@ -76,6 +83,7 @@
             transform: translate(-50%, -50%);
             border-radius: 50%;
         }
+
         .screenshots img {
             width: 100px;
             height: auto;
@@ -84,6 +92,7 @@
             border-radius: 5px;
             transition: transform 0.3s ease-in-out;
         }
+
         .screenshots img:hover {
             transform: scale(1.5);
             filter: brightness(1.2);
@@ -96,20 +105,35 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* This ensures the background stays behind the content */
+            z-index: -1;
+            /* This ensures the background stays behind the content */
         }
-        
+
         canvas {
             display: block;
         }
 
         /* Glitch effect */
         @keyframes glitch {
-            0% { transform: translate(2px, 2px); }
-            25% { transform: translate(-2px, -2px); }
-            50% { transform: translate(2px, 2px); }
-            75% { transform: translate(-2px, -2px); }
-            100% { transform: translate(0px, 0px); }
+            0% {
+                transform: translate(2px, 2px);
+            }
+
+            25% {
+                transform: translate(-2px, -2px);
+            }
+
+            50% {
+                transform: translate(2px, 2px);
+            }
+
+            75% {
+                transform: translate(-2px, -2px);
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
         }
 
         /* Button pulse animation */
@@ -119,11 +143,13 @@
                 height: 300%;
                 opacity: 0.3;
             }
+
             50% {
                 width: 350%;
                 height: 350%;
                 opacity: 0.7;
             }
+
             100% {
                 width: 300%;
                 height: 300%;
@@ -133,234 +159,396 @@
 
         /* Fade in animation for containers */
         @keyframes fadeIn {
-            0% { opacity: 0; transform: scale(0.95); }
-            100% { opacity: 1; transform: scale(1); }
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
-        /* Container hover effect */
+        Container hover effect
         .container:hover {
             box-shadow: 0px 0px 25px rgba(0, 255, 0, 1);
             transform: scale(1.05);
         }
 
         /* Define different neon colors */
-.container:nth-child(1) { box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8); } /* Red */
-.container:nth-child(2) { box-shadow: 0px 0px 20px rgba(0, 0, 255, 0.8); } /* Blue */
-.container:nth-child(3) { box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.8); } /* Yellow */
-.container:nth-child(4) { box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.8); } /* Pink */
-.container:nth-child(5) { box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8); } /* Cyan */
-.container:nth-child(6) { box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.8); } /* Green */
-.container:nth-child(7) { box-shadow: 0px 0px 20px rgba(255, 165, 0, 0.8); } /* Orange */
-.container:nth-child(8) { box-shadow: 0px 0px 20px rgba(128, 0, 128, 0.8); } /* Purple */
+        .container:nth-child(1) {
+            box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
+        }
 
-/* Adjust Hover Effect */
-.container:hover {
-    transform: scale(1.05);
-}
-.container:nth-child(1):hover { box-shadow: 0px 0px 25px rgba(255, 0, 0, 1); }
-.container:nth-child(2):hover { box-shadow: 0px 0px 25px rgba(0, 0, 255, 1); }
-.container:nth-child(3):hover { box-shadow: 0px 0px 25px rgba(255, 255, 0, 1); }
-.container:nth-child(4):hover { box-shadow: 0px 0px 25px rgba(255, 0, 255, 1); }
-.container:nth-child(5):hover { box-shadow: 0px 0px 25px rgba(0, 255, 255, 1); }
-.container:nth-child(6):hover { box-shadow: 0px 0px 25px rgba(0, 255, 0, 1); }
-.container:nth-child(7):hover { box-shadow: 0px 0px 25px rgba(255, 165, 0, 1); }
-.container:nth-child(8):hover { box-shadow: 0px 0px 25px rgba(128, 0, 128, 1); }
+        /* Red */
+        .container:nth-child(2) {
+            box-shadow: 0px 0px 20px rgba(0, 0, 255, 0.8);
+        }
 
+        /* Blue */
+        .container:nth-child(3) {
+            box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.8);
+        }
 
+        /* Yellow */
+        .container:nth-child(4) {
+            box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.8);
+        }
+
+        /* Pink */
+        .container:nth-child(5) {
+            box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8);
+        }
+
+        /* Cyan */
+        .container:nth-child(6) {
+            box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.8);
+        }
+
+        /* Green */
+        .container:nth-child(7) {
+            box-shadow: 0px 0px 20px rgba(255, 165, 0, 0.8);
+        }
+
+        /* Orange */
+        .container:nth-child(8) {
+            box-shadow: 0px 0px 20px rgba(128, 0, 128, 0.8);
+        }
+
+        /* Purple */
+
+        /* Adjust Hover Effect */
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        .container:nth-child(1):hover {
+            box-shadow: 0px 0px 25px rgba(255, 0, 0, 1);
+        }
+
+        .container:nth-child(2):hover {
+            box-shadow: 0px 0px 25px rgba(0, 0, 255, 1);
+        }
+
+        .container:nth-child(3):hover {
+            box-shadow: 0px 0px 25px rgba(255, 255, 0, 1);
+        }
+
+        .container:nth-child(4):hover {
+            box-shadow: 0px 0px 25px rgba(255, 0, 255, 1);
+        }
+
+        .container:nth-child(5):hover {
+            box-shadow: 0px 0px 25px rgba(0, 255, 255, 1);
+        }
+
+        .container:nth-child(6):hover {
+            box-shadow: 0px 0px 25px rgba(0, 255, 0, 1);
+        }
+
+        .container:nth-child(7):hover {
+            box-shadow: 0px 0px 25px rgba(255, 165, 0, 1);
+        }
+
+        .container:nth-child(8):hover {
+            box-shadow: 0px 0px 25px rgba(128, 0, 128, 1);
+        }
+
+        /* Define different neon colors for containers */
+        .container:nth-child(1) {
+            box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
+        }
+
+        /* Red */
+        .container:nth-child(2) {
+            box-shadow: 0px 0px 20px rgba(0, 0, 255, 0.8);
+        }
+
+        /* Blue */
+        .container:nth-child(3) {
+            box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.8);
+        }
+
+        /* Yellow */
+        .container:nth-child(4) {
+            box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.8);
+        }
+
+        /* Pink */
+        .container:nth-child(5) {
+            box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8);
+        }
+
+        /* Cyan */
+
+        /* Different neon colors for icons */
+        .container:nth-child(1) .icon {
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.7);
+        }
+
+        /* Red */
+        .container:nth-child(2) .icon {
+            box-shadow: 0px 0px 15px rgba(0, 0, 255, 0.7);
+        }
+
+        /* Blue */
+        .container:nth-child(3) .icon {
+            box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.7);
+        }
+
+        /* Yellow */
+        .container:nth-child(4) .icon {
+            box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.7);
+        }
+
+        /* Pink */
+        .container:nth-child(5) .icon {
+            box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7);
+        }
+
+        /* Cyan */
+
+        Different neon colors for buttons
+        .container:nth-child(1) .button {
+            box-shadow: 0px 0px 25px rgba(255, 0, 0, 0.6);
+            background-color: #ff0000;
+        }
+
+        /* Red */
+        .container:nth-child(2) .button {
+            box-shadow: 0px 0px 25px rgba(0, 0, 255, 0.6);
+            background-color: #0000ff;
+        }
+
+        /* Blue */
+        .container:nth-child(3) .button {
+            box-shadow: 0px 0px 25px rgba(255, 255, 0, 0.6);
+            background-color: #ffff00;
+        }
+
+        /* Yellow */
+        .container:nth-child(4) .button {
+            box-shadow: 0px 0px 25px rgba(255, 0, 255, 0.6);
+            background-color: #ff00ff;
+        }
+
+        /* Pink */
+        .container:nth-child(5) .button {
+            box-shadow: 0px 0px 25px rgba(0, 255, 255, 0.6);
+            background-color: #00ffff;
+        }
+
+        /* Cyan */
+
+        /* Button hover effect */
+        .container:nth-child(1) .button:hover {
+            background-color: #cc0000;
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.9);
+        }
+
+        .container:nth-child(2) .button:hover {
+            background-color: #0000cc;
+            box-shadow: 0px 0px 15px rgba(0, 0, 255, 0.9);
+        }
+
+        .container:nth-child(3) .button:hover {
+            background-color: #cccc00;
+            box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.9);
+        }
+
+        .container:nth-child(4) .button:hover {
+            background-color: #cc00cc;
+            box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.9);
+        }
+
+        .container:nth-child(5) .button:hover {
+            background-color: #00cccc;
+            box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.9);
+        }
     </style>
 </head>
+
 <body>
-            <!-- Matrix background -->
-            <div class="matrix-bg">
-                <canvas id="matrix"></canvas>
-            </div>
+    <!-- Matrix background -->
+    <div class="matrix-bg">
+        <canvas id="matrix"></canvas>
+    </div>
     <div class="app-container">
         <div class="container">
-            <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/herohack" alt="Icon" class="icon">
+            <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/herohack" alt="Icon"
+                class="icon">
             <h1> Sikkim Tool</h1>
             <div class="screenshots">
                 <img src="screenshot/herohack" alt="Screenshot 1">
                 <img src="screenshot/herohack2" alt="Screenshot 2">
             </div>
             <a href="#" class="button">Download Now</a>
-           <p>• Number Prediction Hack</p>  
-            <p>• Winning Unlimited (100% Free) 🚀</p>  
-            <p>• 100% Free 🤑</p>  
-            <p>• No Limit 🥳</p>  
-            <p>• Fast & Easy Results ⚡</p>  
-            <p>• Works Instantly 🔥</p>  
-            <p>• New Registration Required ✅</p>  
+
+            <p>• Winning Unlimited (100% Free) 🚀</p>
+            <p>• 100% Free 🤑</p>
+            <p>• No Limit 🥳</p>
+            <p>• Fast & Easy Results ⚡</p>
+            <p>• Works Instantly 🔥</p>
+            <p>• New Registration Required ✅</p>
             <p>• Safe & Secure 💯</p>
             <p>Use Premium Earn Unlimited🔥</p>
             <a href="#" class="button">Join Telegram</a>
         </div>
 
         <div class="app-container">
-        <div class="container">
-            <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/herohack" alt="Icon" class="icon">
-            <h1>Goa Tool</h1>
-            <div class="screenshots">
-                <img src="screenshot/herohack" alt="Screenshot 1">
-                <img src="screenshot/herohack2" alt="Screenshot 2">
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/herohack"
+                    alt="Icon" class="icon">
+                <h1>Goa Tool</h1>
+                <div class="screenshots">
+                    <img src="screenshot/herohack" alt="Screenshot 1">
+                    <img src="screenshot/herohack2" alt="Screenshot 2">
+                </div>
+                <a href="#" class="button">Download Now</a>
+                <p>• 100% Free 🤑</p>
+                <p>• No Limit 🥳</p>
+                <p>• Fast & Easy Results ⚡</p>
+                <p>• Works Instantly 🔥</p>
+                <p>• New Registration Required ✅</p>
+                <p>Use Premium Earn Unlimited🔥</p>
+                <a href="#" class="button">Join Telegram</a>
             </div>
-            <a href="#" class="button">Download Now</a>
-            <p>• Number Prediction Hack</p>  
-            <p>• Winning Unlimited (100% Free) 🚀</p>  
-            <p>• 100% Free 🤑</p>  
-            <p>• No Limit 🥳</p>  
-            <p>• Fast & Easy Results ⚡</p>  
-            <p>• Works Instantly 🔥</p>  
-            <p>• New Registration Required ✅</p>  
-            <p>• Safe & Secure 💯</p>
-            <p>Use Premium Earn Unlimited🔥</p>
-            <a href="#" class="button">Join Telegram</a>
+
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzrsikkim"
+                    alt="Icon" class="icon">
+                <h1>A22 Tool</h1>
+                <div class="screenshots">
+                    <img src="screenshot/sikkim" alt="Screenshot 3">
+                    <img src="screenshot/sikkim2" alt="Screenshot 4">
+                </div>
+                <a href="#" class="button">Download Now</a>
+                <p>• 100% Free 🤑</p>
+                <p>• No Limit 🥳</p>
+                <p>• Fast & Easy Results ⚡</p>
+                <p>• Works Instantly 🔥</p>
+                <p>• New Registration Required ✅</p>
+                <p>Use Premium Earn Unlimited🔥</p>
+                <a href="#" class="button">Join Telegram</a>
+            </div>
+
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzrgoa" alt="Icon"
+                    class="icon">
+                <h1>Diuwin Tool</h1>
+                <div class="screenshots">
+                    <img src="screenshot/goa" alt="Screenshot 5">
+                    <img src="screenshot/goa2" alt="Screenshot 6">
+                </div>
+                <a href="#" class="button">Download Now</a>
+                <p>• 100% Free 🤑</p>
+                <p>• No Limit 🥳</p>
+                <p>• Fast & Easy Results ⚡</p>
+                <p>• Works Instantly 🔥</p>
+                <p>• New Registration Required ✅</p>
+                <p>Use Premium Earn Unlimited🔥</p>
+                <a href="#" class="button">Join Telegram</a>
+            </div>
+
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzrdiuwin"
+                    alt="Icon" class="icon">
+                <h1>Okwin Tool</h1>
+                <div class="screenshots">
+                    <img src="screenshot/diuwin alt=" Screenshot 7">
+                    <img src="screenshot/diuwin" alt="Screenshot 8">
+                </div>
+                <a href="#" class="button">Download Now</a>
+                <p>• 100% Free 🤑</p>
+                <p>• No Limit 🥳</p>
+                <p>• Fast & Easy Results ⚡</p>
+                <p>• Works Instantly 🔥</p>
+                <p>• New Registration Required ✅</p>
+                <p>Use Premium Earn Unlimited🔥</p>
+                <a href="#" class="button">Join Telegram</a>
+            </div>
+
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzrokwin"
+                    alt="Icon" class="icon">
+                <h1>Daman Tool</h1>
+                <div class="screenshots">
+                    <img src="screenshot/okwin" alt="Screenshot 9">
+                    <img src="screenshot/okwin2" alt="Screenshot 10">
+                </div>
+                <a href="#" class="button">Download Now</a>
+                <p>• 100% Free 🤑</p>
+                <p>• No Limit 🥳</p>
+                <p>• Fast & Easy Results ⚡</p>
+                <p>• Works Instantly 🔥</p>
+                <p>• New Registration Required ✅</p>
+                <p>Use Premium Earn Unlimited🔥</p>
+                <a href="#" class="button">Join Telegram</a>
+            </div>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzrdaman"
+                    alt="Icon" class="icon">
+                <h1>55 Club Tool</h1>
+                <div class="screenshots">
+                    <img src="screenshot/daman" alt="Screenshot 11">
+                    <img src="screenshot/daman2" alt="Screenshot 12">
+                </div>
+                <a href="#" class="button">Download Now</a>
+                <p>• 100% Free 🤑</p>
+                <p>• No Limit 🥳</p>
+                <p>• Fast & Easy Results ⚡</p>
+                <p>• Works Instantly 🔥</p>
+                <p>• New Registration Required ✅</p>
+                <p>Use Premium Earn Unlimited🔥</p>
+                <a href="#" class="button">Join Telegram</a>
+            </div>
+            <div class="container">
+                <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzr66" alt="Icon"
+                    class="icon">
+                <h1>66 Lottery Tool</h1>
+                <div class="screenshots">
+                    <img src="screenshot/daman" alt="Screenshot 13">
+                    <img src="screenshot/daman2" alt="Screenshot 14">
+                </div>
+                <a href="#" class="button">Download Now</a>
+                <p>• 100% Free 🤑</p>
+                <p>• No Limit 🥳</p>
+                <p>• Fast & Easy Results ⚡</p>
+                <p>• Works Instantly 🔥</p>
+                <p>• New Registration Required ✅</p>
+                <p>Use Premium Earn Unlimited🔥</p>
+                <a href="#" class="button">Join Telegram</a>
+            </div>
+
+            <!-- Repeat for other containers (e.g., Lzr Sikkim, Lzr Goa, etc.) -->
+
         </div>
 
-        <div class="container">
-            <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzrsikkim" alt="Icon" class="icon">
-            <h1>A22 Tool</h1>
-            <div class="screenshots">
-                <img src="screenshot/sikkim" alt="Screenshot 3">
-                <img src="screenshot/sikkim2" alt="Screenshot 4">
-            </div>
-            <a href="#" class="button">Download Now</a>
-            <p>• Number Prediction Hack</p>  
-            <p>• Winning Unlimited (100% Free) 🚀</p>  
-            <p>• 100% Free 🤑</p>  
-            <p>• No Limit 🥳</p>  
-            <p>• Fast & Easy Results ⚡</p>  
-            <p>• Works Instantly 🔥</p>  
-            <p>• New Registration Required ✅</p>  
-            <p>• Safe & Secure 💯</p>
-            <p>Use Premium Earn Unlimited🔥</p>
-            <a href="#" class="button">Join Telegram</a>
-        </div>
+        <script>
+            // Matrix background effect
+            const canvas = document.getElementById("matrix");
+            const ctx = canvas.getContext("2d");
 
-        <div class="container">
-            <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzrgoa" alt="Icon" class="icon">
-            <h1>Diuwin Tool</h1>
-            <div class="screenshots">
-                <img src="screenshot/goa" alt="Screenshot 5">
-                <img src="screenshot/goa2" alt="Screenshot 6">
-            </div>
-            <a href="#" class="button">Download Now</a>
-            <p>• Number Prediction Hack</p>  
-            <p>• Winning Unlimited (100% Free) 🚀</p>  
-            <p>• 100% Free 🤑</p>  
-            <p>• No Limit 🥳</p>  
-            <p>• Fast & Easy Results ⚡</p>  
-            <p>• Works Instantly 🔥</p>  
-            <p>• New Registration Required ✅</p>  
-            <p>• Safe & Secure 💯</p>
-            <p>Use Premium Earn Unlimited🔥</p>
-            <a href="#" class="button">Join Telegram</a>
-        </div>
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
 
-        <div class="container">
-            <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzrdiuwin" alt="Icon" class="icon">
-            <h1>Okwin Tool</h1>
-            <div class="screenshots">
-                <img src="screenshot/diuwin alt="Screenshot 7">
-                <img src="screenshot/diuwin" alt="Screenshot 8">
-            </div>
-            <a href="#" class="button">Download Now</a>
-          <p>• Number Prediction Hack</p>  
-            <p>• Winning Unlimited (100% Free) 🚀</p>  
-            <p>• 100% Free 🤑</p>  
-            <p>• No Limit 🥳</p>  
-            <p>• Fast & Easy Results ⚡</p>  
-            <p>• Works Instantly 🔥</p>  
-            <p>• New Registration Required ✅</p>  
-            <p>• Safe & Secure 💯</p>
-            <p>Use Premium Earn Unlimited🔥</p>
-            <a href="#" class="button">Join Telegram</a>
-        </div>
+            const letters = Array(256).join(1).split('');
 
-        <div class="container">
-            <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzrokwin" alt="Icon" class="icon">
-            <h1>Daman Tool</h1>
-            <div class="screenshots">
-                <img src="screenshot/okwin" alt="Screenshot 9">
-                <img src="screenshot/okwin2" alt="Screenshot 10">
-            </div>
-            <a href="#" class="button">Download Now</a>
-           <p>• Number Prediction Hack</p>  
-            <p>• Winning Unlimited (100% Free) 🚀</p>  
-            <p>• 100% Free 🤑</p>  
-            <p>• No Limit 🥳</p>  
-            <p>• Fast & Easy Results ⚡</p>  
-            <p>• Works Instantly 🔥</p>  
-            <p>• New Registration Required ✅</p>  
-            <p>• Safe & Secure 💯</p>
-            <p>Use Premium Earn Unlimited🔥</p>
-            <a href="#" class="button">Join Telegram</a>
-        </div>
-        <div class="container">
-            <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzrdaman" alt="Icon" class="icon">
-            <h1>55 Club Tool</h1>
-            <div class="screenshots">
-                <img src="screenshot/daman" alt="Screenshot 11">
-                <img src="screenshot/daman2" alt="Screenshot 12">
-            </div>
-            <a href="#" class="button">Download Now</a>
-             <p>• Number Prediction Hack</p>  
-            <p>• Winning Unlimited (100% Free) 🚀</p>  
-            <p>• 100% Free 🤑</p>  
-            <p>• No Limit 🥳</p>  
-            <p>• Fast & Easy Results ⚡</p>  
-            <p>• Works Instantly 🔥</p>  
-            <p>• New Registration Required ✅</p>  
-            <p>• Safe & Secure 💯</p>
-            <p>Use Premium Earn Unlimited🔥</p>
-            <a href="#" class="button">Join Telegram</a>
-        </div>
-        <div class="container">
-            <img src="https://raw.githubusercontent.com/Apk-download-git/LZR-Hack/refs/heads/main/lzr66" alt="Icon" class="icon">
-            <h1>66 Lottery Tool</h1>
-            <div class="screenshots">
-                <img src="screenshot/daman" alt="Screenshot 13">
-                <img src="screenshot/daman2" alt="Screenshot 14">
-            </div>
-            <a href="#" class="button">Download Now</a>
-              <p>• Number Prediction Hack</p>  
-            <p>• Winning Unlimited (100% Free) 🚀</p>  
-            <p>• 100% Free 🤑</p>  
-            <p>• No Limit 🥳</p>  
-            <p>• Fast & Easy Results ⚡</p>  
-            <p>• Works Instantly 🔥</p>  
-            <p>• New Registration Required ✅</p>  
-            <p>• Safe & Secure 💯</p>
-            <p>Use Premium Earn Unlimited🔥</p>
-            <a href="#" class="button">Join Telegram</a>
-        </div>
+            const drawMatrix = () => {
+                ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "#00ff00"; // Green matrix effect
+                letters.map((y_pos, index) => {
+                    const text = String.fromCharCode(3e4 + Math.random() * 33);
+                    const x_pos = index * 10;
+                    ctx.fillText(text, x_pos, y_pos);
+                    letters[index] = (y_pos > 758 + Math.random() * 1e4) ? 0 : y_pos + 10;
+                });
+            };
 
-        <!-- Repeat for other containers (e.g., Lzr Sikkim, Lzr Goa, etc.) -->
-
-    </div>
-
-    <script>
-        // Matrix background effect
-        const canvas = document.getElementById("matrix");
-        const ctx = canvas.getContext("2d");
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const letters = Array(256).join(1).split('');
-
-        const drawMatrix = () => {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "#00ff00"; // Green matrix effect
-            letters.map((y_pos, index) => {
-                const text = String.fromCharCode(3e4 + Math.random() * 33);
-                const x_pos = index * 10;
-                ctx.fillText(text, x_pos, y_pos);
-                letters[index] = (y_pos > 758 + Math.random() * 1e4) ? 0 : y_pos + 10;
-            });
-        };
-
-        setInterval(drawMatrix, 50);
-    </script>
+            setInterval(drawMatrix, 50);
+        </script>
 </body>
+
 </html>
