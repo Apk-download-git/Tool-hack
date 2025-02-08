@@ -528,9 +528,38 @@
             background-color: #550066;
             /* Midnight Purple */
         }
+        /* Big tittle in middle */
+        .neon-title {
+            font-size: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            color: #0ff;
+            /* Cyan Neon */
+            text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+            margin-top: 50px;
+            animation: flicker 1.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+                text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+            }
+
+            50% {
+                opacity: 0.8;
+                text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #00ffff, 0 0 50px #00ffff;
+            }
+
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+            }
+        }
     </style>
 </head>
-
+<h1 class="neon-title">Number Prediction Hack</h1>
 <body>
     <!-- Matrix background -->
     <div class="matrix-bg">
